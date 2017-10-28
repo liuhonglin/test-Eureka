@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @RequestMapping("/say")
-    public String sayHello(@RequestParam String name) {
+    public String sayHello(@RequestParam(required = false) String name) {
         return "hello " + name;
     }
 }
